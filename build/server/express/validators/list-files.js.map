@@ -1,0 +1,1 @@
+{"version":3,"file":"list-files.js","sourceRoot":"","sources":["../../../../src/server/express/validators/list-files.ts"],"names":[],"mappings":";;;AAAA,yDAAyD;AAEzD,SAAgB,kBAAkB,CAAC,KAAa,EAAE,YAAoB;IAClE,OAAO,IAAA,yBAAK,EAAC,KAAK,CAAC;SACd,SAAS,EAAE;SACX,OAAO,CAAC,YAAY,CAAC;SACrB,WAAW,CAAC,WAAW,KAAK,QAAQ,CAAC,CAAA;AAC9C,CAAC;AALD,gDAKC"}
