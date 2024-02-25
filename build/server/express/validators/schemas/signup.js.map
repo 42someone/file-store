@@ -1,1 +1,0 @@
-{"version":3,"file":"signup.js","sourceRoot":"","sources":["../../../../../src/server/express/validators/schemas/signup.ts"],"names":[],"mappings":";;;AAEa,QAAA,0BAA0B,GAAU;IAC7C,KAAK,EAAE;QACH,QAAQ,EAAE,IAAI;QACd,OAAO,EAAE,KAAK;QACd,YAAY,EAAE,sBAAsB;KACvC;IACD,QAAQ,EAAE;QACN,QAAQ,EAAE,IAAI;QACd,OAAO,EAAE,KAAK;QACd,YAAY,EAAE,yBAAyB;KAC1C;CACJ,CAAA"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"registration.js","sourceRoot":"","sources":["../../../../../src/server/express/validators/schemas/registration.ts"],"names":[],"mappings":";;;AAEa,QAAA,iCAAiC,GAAU;IACpD,KAAK,EAAE;QACH,QAAQ,EAAE,IAAI;QACd,YAAY,EAAE,sBAAsB;KACvC;IACD,QAAQ,EAAE;QACN,QAAQ,EAAE,IAAI;QACd,YAAY,EAAE,yBAAyB;KAC1C;CACJ,CAAA"}
