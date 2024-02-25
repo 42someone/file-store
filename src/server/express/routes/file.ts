@@ -6,9 +6,10 @@ import * as UseCases from "../../../use-cases";
 import {Symbols} from "../../../dependencies/dependency-identifiers";
 import * as Middlewares from "../middleware";
 import {checkFileId} from "../validators";
-import * as Middleware from "../middleware";
 import {createReadStream} from "fs"
 const FileRouter = Router()
+
+FileRouter.use(Middlewares.IsAuthenticated)
 
 FileRouter.post("/upload", fileupload({createParentPath: true,}), async (req, res) => {
     if(!req.files) {
@@ -67,7 +68,7 @@ FileRouter.get("/:id",
     }
 )
 
-FileRouter.delete("/delete/:id",checkFileId(), Middleware.checkValidation, async (req, res) => {
+FileRouter.delete("/delete/:id",checkFileId(), Middlewares.checkValidation, async (req, res) => {
     const id = req.params.id
     const DeleteFileUseCase = DependencyContainer.get<UseCases.DeleteFileUseCase>(Symbols.DeleteFileUseCase)
 
@@ -83,7 +84,7 @@ FileRouter.delete("/delete/:id",checkFileId(), Middleware.checkValidation, async
 
 })
 
-FileRouter.get("/download/:id", checkFileId(), Middleware.checkValidation, async (req, res) => {
+FileRouter.get("/download/:id", checkFileId(), Middlewares.checkValidation, async (req, res) => {
     const id = req.params.id
     const DownloadFileUseCase = DependencyContainer.get<UseCases.DownloadFileUseCase>(Symbols.DownloadFileUseCase)
 
@@ -107,7 +108,7 @@ FileRouter.get("/download/:id", checkFileId(), Middleware.checkValidation, async
     }
 })
 
-FileRouter.post("/update/:id", checkFileId(), Middleware.checkValidation, fileupload({createParentPath: true,}), async (req, res) => {
+FileRouter.post("/update/:id", checkFileId(), Middlewares.checkValidation, fileupload({createParentPath: true,}), async (req, res) => {
     if(!req.files) {
         res.status(400).json({message: "Expected file"})
     }
