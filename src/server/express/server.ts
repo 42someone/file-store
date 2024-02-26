@@ -1,4 +1,5 @@
 import express, {Express} from "express"
+import cors from "cors"
 
 import * as Infrastructure from "../../infrastructure";
 import {RouterDetails} from "./routes";
@@ -14,6 +15,7 @@ export class ExpressServerImpl implements ExpressServer {
     constructor(config: Infrastructure.ServerConfig) {
         this.server = express();
         this.server.use(express.json())
+        this.server.use(cors())
         this.config = config
     }
     public async start(): Promise<void> {
